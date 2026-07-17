@@ -202,8 +202,3 @@ def get_token_response():
     response = make_response(jsonify(ordered_result))
     response.headers["Content-Type"] = "application/json"
     return response
-
-if __name__ == '__main__':
-    # Read port from environment variable or default to 5000.
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
